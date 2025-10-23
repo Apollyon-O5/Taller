@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Taller Automotriz";
+}
+
+<main class="container mt-4">
+    <section class="row text-center mb-5" aria-labelledby="tallerTitle">
+        <h1 id="tallerTitle" class="display-4">Bienvenido al Taller Automotriz</h1>
+        <p class="lead">
+            Servicio profesional de reparación y mantenimiento de vehículos.
+            Contamos con técnicos calificados, repuestos de calidad y atención personalizada.
+        </p>
+
+    </section>
+
+    <div class="row text-center">
+        <section class="col-md-4 mb-4" aria-labelledby="serviciosTitle">
+            <h2 id="serviciosTitle">Nuestros Servicios</h2>
+            <p>
+                Ofrecemos mantenimiento preventivo, reparaciones generales, cambios de aceite,
+                revisión de frenos, diagnósticos computarizados y mucho más.
+            </p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "SERVICIO")">Ver más &raquo;</a></p>
+        </section>
+
+        <section class="col-md-4 mb-4" aria-labelledby="repuestosTitle">
+            <h2 id="repuestosTitle">Repuestos de calidad</h2>
+            <p>
+                Trabajamos con proveedores confiables y repuestos originales para garantizar
+                el mejor desempeño y seguridad de tu vehículo.
+            </p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "REPUESTO")">Ver repuestos &raquo;</a></p>
+        </section>
+
+        <section class="col-md-4 mb-4" aria-labelledby="tecnicosTitle">
+            <h2 id="tecnicosTitle">Técnicos especializados</h2>
+            <p>
+                Nuestro equipo de técnicos está altamente capacitado para brindarte soluciones rápidas
+                y efectivas con garantía de calidad.
+            </p>
+            <p><a class="btn btn-outline-primary" href="@Url.Action("Index", "TECNICO")">Conócenos &raquo;</a></p>
+        </section>
+    </div>
+</main>

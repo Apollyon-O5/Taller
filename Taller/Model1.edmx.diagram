@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="41a1d96e1256452eaea078923fbed40f" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="TallerModel.CLIENTE" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.PROVEEDOR" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.REPUESTO" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.SERVICIO" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TECNICO" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.VEHICULO" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="TallerModel.FK__VEHICULO__idclie__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="TallerModel.FK__REPUESTO__idprov__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="TallerModel.FK__SERVICIO__idtecn__2B3F6F97" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TallerModel.USUARIOS" Width="1.5" PointX="5.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

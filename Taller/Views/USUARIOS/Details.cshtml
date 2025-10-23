@@ -1,0 +1,12 @@
+﻿@model Taller.USUARIOS
+
+<h2>Detalles Usuario</h2>
+
+<p>ID: @Model.idUsuario</p>
+<p>Usuario: @Model.Usuario</p>
+<p>Clave: @Model.Clave</p>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idUsuario }) |
+    @Html.ActionLink("Volver al listado", "Index")
+</p>

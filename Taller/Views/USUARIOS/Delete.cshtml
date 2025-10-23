@@ -1,0 +1,16 @@
+﻿@model Taller.USUARIOS
+
+<h2>Eliminar Usuario</h2>
+
+<p>¿Seguro que quieres eliminar este usuario?</p>
+
+<p>ID: @Model.idUsuario</p>
+<p>Usuario: @Model.Usuario</p>
+
+@using (Html.BeginForm("DeleteConfirmed", "USUARIOS", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.idUsuario)
+    <button type="submit">Eliminar</button>
+    @Html.ActionLink("Cancelar", "Index")
+}

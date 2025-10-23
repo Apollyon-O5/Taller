@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Taller.USUARIOS>
+
+<h2>Usuarios</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create", null, new { @class = "btn btn-success" })
+</p>
+
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Clave</th>
+        <th>Acciones</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.idUsuario</td>
+            <td>@item.Usuario</td>
+            <td>@item.Clave</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.idUsuario }, new { @class = "btn btn-warning btn-sm" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.idUsuario }, new { @class = "btn btn-info btn-sm" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.idUsuario }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>
