@@ -25,7 +25,20 @@
                     <li>@Html.ActionLink("Servicios", "Index", "SERVICIO", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Tecnicos", "Index", "TECNICO", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Vehiculos", "Index", "VEHICULO", new { area = "" }, new { @class = "nav-link" })</li>
-
+                    <ul class="navbar-nav">
+                        @if (Session["Usuario"] != null)
+                        {
+                            <li>
+                                @Html.ActionLink("Cerrar sesión", "Logout", "USUARIOS", new { area = "" }, new { @class = "nav-link btn btn-danger text-white" })
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                @Html.ActionLink("Login", "Login", "USUARIOS", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                        }
+                    </ul>
                 </ul>
             </div>
         </div>

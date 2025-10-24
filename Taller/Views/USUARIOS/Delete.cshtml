@@ -1,16 +1,44 @@
 ﻿@model Taller.USUARIOS
 
+@{
+    ViewBag.Title = "Eliminar Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 <h2>Eliminar Usuario</h2>
 
-<p>¿Seguro que quieres eliminar este usuario?</p>
+<p class="text-danger">¿Seguro que deseas eliminar este usuario?</p>
+<hr />
 
-<p>ID: @Model.idUsuario</p>
-<p>Usuario: @Model.Usuario</p>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2">ID</label>
+        <div class="col-md-10">
+            <p class="form-control-static">@Model.idUsuario</p>
+        </div>
+    </div>
 
-@using (Html.BeginForm("DeleteConfirmed", "USUARIOS", FormMethod.Post))
+    <div class="form-group">
+        <label class="control-label col-md-2">Usuario</label>
+        <div class="col-md-10">
+            <p class="form-control-static">@Model.Usuario</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Clave</label>
+        <div class="col-md-10">
+            <p class="form-control-static">@Model.Clave</p>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.idUsuario)
-    <button type="submit">Eliminar</button>
-    @Html.ActionLink("Cancelar", "Index")
+    <div class="form-group">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-secondary" })
+    </div>
 }
